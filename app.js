@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const formidable = require("express-formidable");
-const postModel = require('../models/postModel');
+const postModel = require('./models/postModel');
 const fileupload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 
