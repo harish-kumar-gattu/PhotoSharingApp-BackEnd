@@ -13,6 +13,11 @@ app.use(fileupload({
     useTempFiles: true
 }))
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*")
+    next();
+})
+
 const port = process.env.PORT || 5000;
 mongoose.connect('mongodb+srv://root1:test123@cluster0.edyhsj8.mongodb.net/?retryWrites=true&w=majority')
 
